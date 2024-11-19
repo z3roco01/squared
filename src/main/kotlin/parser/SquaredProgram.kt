@@ -40,7 +40,7 @@ class SquaredProgram {
                 when(type) {
                     SquaredTokenType.SQUARE -> accumulator = accumulator.toDouble().pow(2).roundToInt().toByte()
                     SquaredTokenType.SQRT   -> accumulator = sqrt(accumulator.toDouble()).roundToInt().toByte()
-                    SquaredTokenType.OUTPUT -> print("${accumulator} ")
+                    SquaredTokenType.OUTPUT -> print("${accumulator.toUByte()} ")
                     SquaredTokenType.PRINT  -> print(accumulator.toInt().toChar())
                     SquaredTokenType.IMMEDIATE -> accumulator = token.data
                     SquaredTokenType.NOP    -> {}
